@@ -11,6 +11,3 @@ stb.addEventListener('mouseover', function(){
 stb.addEventListener('click', function(){
     this.style.background = rndrgb(1,255)
 })
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    stb.style.opacity = 0
-}
