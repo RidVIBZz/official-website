@@ -13,9 +13,8 @@ ul{
     padding: 10px;
     font-family: sans-serif;
     display: flex;
-    position: absolute;
-    margin-bottom: -100px;
     height: 50px;
+    margin-bottom: -90px;
     justify-content: space-evenly;
     margin-left: 0px;
     flex-direction: row;
@@ -176,6 +175,9 @@ ul{
     #r2,#r1{
         display: none;
     }
+    .notification{
+      margin-bottom: -21px;
+    }
     #aboutme{
       height: 0%;
     }
@@ -186,8 +188,9 @@ ul{
         display: flex;
     }
     #navbar{
-      top: 45px;
-      width: 200px;
+    top: 35px;
+    position: absolute;
+    width: 200px;
     }
     .hithere{
       display: none;
