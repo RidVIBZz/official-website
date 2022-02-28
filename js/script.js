@@ -2,7 +2,6 @@ let stb = document.querySelector("#stb")
 let gm = document.getElementById('gamelvl')
 let diff = document.getElementById('difficulty')
 let rndint = (min,max)=> Math.floor(Math.random()*(max-min))+min;
-let ismobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)
 let rndrgb = (min,max)=> 'rgb(' + Math.floor(Math.random()*max)+'' + ',' + Math.floor(Math.random()*max) + ',' + Math.floor(Math.random()*max)+')'
 
 stb.addEventListener('mouseover', function(){
@@ -15,10 +14,6 @@ stb.addEventListener('mouseover', function(){
 /*stb.addEventListener('click', function(){
     
 })*/
-if (ismobile) {
-    stb.style.opacity = 0
-    gm.style.opacity = 0
-}
 diff.addEventListener('click',first)
 function first(e){
   diff.innerHTML='Medium';
