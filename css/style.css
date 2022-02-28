@@ -13,6 +13,7 @@ ul{
     padding: 10px;
     font-family: sans-serif;
     display: flex;
+    position: absolute;
     margin-bottom: -100px;
     height: 50px;
     justify-content: space-evenly;
@@ -88,7 +89,7 @@ ul{
     margin-left: 0px;
     opacity: 0.3;
     width: auto;
-
+    float: right;
     position: absolute;
 }
 #blur1{
@@ -99,10 +100,12 @@ ul{
 }
 #r2{
     margin-left: 0px;
+    float: right;
     opacity: 0.3;
 }
 #blur{
     width:780px;
+    margin-right: -8%;
     opacity: 0.3;
     }
 #btndiv{
@@ -170,26 +173,29 @@ ul{
     background: rgb(5, 73, 136); 
   }
   @media screen and (max-width:511px){
-    #blur,#blur1{
-        width: auto;
-        z-index: 0;
+    #r2,#r1{
+        display: none;
     }
-    #r1{
-      top:700px ;
+    #aboutme{
+      height: 0%;
+    }
+    #blur1{
+      display: none;
     }
     .openbtn{
         display: flex;
     }
     #navbar{
-        display: none;
+      top: 45px;
+      width: 200px;
     }
-    #r2{
-        z-index: 1000;
-        margin-left: 0px;
+    .hithere{
+      display: none;
     }
-    #hithere{
-        z-index: 1;
-
+    #abt{
+      top: 70px;
+      left: -18px;
+      width: auto;
     }
     #gamelvl{
         top: 2px;

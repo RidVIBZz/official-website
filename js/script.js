@@ -11,6 +11,11 @@ stb.addEventListener('mouseover', function(){
     this.style.top = rndint(5,99) + '%'
     this.style.bottom = 'auto'
 })
+let ismobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)
+if (ismobile) {
+    stb.style.display = 'none'
+    gm.style.display = 'none'
+}
 /*stb.addEventListener('click', function(){
     
 })*/
