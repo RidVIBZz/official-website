@@ -10,19 +10,41 @@
     <title>Ridhan Mujeeb</title>
 </head>
 <body >
-            <button id="stb">catch me</button>
-            <section>
+    <section>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a id="hme" href="#">Home</a>
+            <a id="abtm" href="#aboutme">About Me</a>
+            <a id="pro" href="#projects">Projects</a>
+          </div>
+          
+          <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>  
+          </div>
+        <nav id="navbar">
+             <ul>
+                 <li><a id="home" href="#">Home</a></li>
+                 <li><a id="abtme" href="#aboutme">About Me</a></li>
+                 <li><a id="proj" href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+                 <p id="gamelvl"> Game Difficulty : <span id="difficulty">Hard</span></p>
+                 <button id="stb">catch me</button>
+            <div id="notification" class="notification">
+                    <h1></h1>
+            </div>
             <div id="fp">
-                <h1 id="hithere">Hi there, I'm Ridhan ..... </h1>
-                <img id="r2" src="assets/images/r2.jpg" alt="">
+                   
                 <img src="assets/images/imageedit_2_7204664170~2.jpg" id="blur" alt="">
+                <h1 class="hithere">Hi there, I'm Ridhan ..... </h1>
+                <img id="r2" src="assets/images/r2.jpg" alt="">
             </div>
             <div id="aboutme">
                 <img id="blur1" src="assets/images/imageedit_2_7204664170~2.jpg" alt="blur">
-                <img id="r1" src="assets/images/r1.jpg" alt="aboutmer1">
                 <h1 id="abt">YO There , My name is Ridhan and I have been alive on this 
                     planet for just about... <p id="myage"></p>
                 </h1>
+                <img id="r1" src="assets/images/r1.jpg" alt="aboutmer1">
             </div>
     </section>
 </body>

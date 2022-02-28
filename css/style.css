@@ -1,23 +1,81 @@
 body{
     background-color: rgba(34, 33, 33, 0.966);
     margin: 0%;
+    padding: 0%;
 }
-#blur1{
-    width: 606px;
-    opacity: 0.3;
-    margin-left: -30px;
-    height: 750px;
+ul{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+}
+#navbar{
+    font-size: 19px;
+    padding: 10px;
+    font-family: sans-serif;
+    display: flex;
+    margin-bottom: -100px;
+    height: 50px;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    flex-direction: row;
+    z-index: -1;
+    flex: 1;
+}
+#home{
+    position: absolute;
+    top: 3%;
+    text-decoration: none;
+    left: 30px;
+    box-sizing: border-box;
+    color: azure;
+
+}
+#proj{
+    position: absolute;
+    text-decoration: none;
+    top: 3%;
+    left: 230px;
+    box-sizing: border-box;
+    color: azure;
+
+}
+#difficulty{
+    font-weight: bolder;
+    color: red;
+    transition: all .5s;
+}
+#difficulty:hover{
+  cursor: pointer;
+  color: rgb(136, 9, 9);
+}
+#gamelvl{
+    position: absolute;
+    padding: 5px;
+    z-index: 1;
+    top: 1%;
+    left :80%;
+    font-family: 'Courier New', Courier, monospace;
+    border: solid #4de51f 4px;
+    box-sizing: border-box;
+    color: azure;
+
+}
+#abtme{
+    top: 3%;
+    position: absolute;
+    text-decoration: none;
+    left: 110px;
+    box-sizing: border-box;
+    color: azure;
+
 }
 #abt{
-    margin-top: -680px;
     margin-left: 50px;
+    display: flex;
+    position: absolute;
     width: 400px;
-}
-#r1{
-    float: right;
-    margin-left: -300px;
-    margin-right: -93px;
-    opacity: 0.3;
+    top: 762px;
+    z-index: 1;
 }
 #aboutme{
     color: aliceblue;
@@ -26,24 +84,37 @@ body{
     margin-top: 50px;
     margin-left: 30px;
 }
+#r1{
+    margin-left: 0px;
+    opacity: 0.3;
+    width: auto;
+
+    position: absolute;
+}
+#blur1{
+    opacity: 0.3;
+    margin-left: -30px;
+    height: 750px;
+    z-index: 1;
+}
 #r2{
-    margin-left: 205px;
+    margin-left: 0px;
     opacity: 0.3;
 }
+#blur{
+    width:780px;
+    opacity: 0.3;
+    }
 #btndiv{
     position: relative;
     top: 2%;
     left: 2%;
     border: solid 3px red;
-}
-#blur{
-    width: 850px;
-    opacity: 0.3;
-    margin-left:-1520px;
-}
+    }
 #fp{
     display: flex;
     width: 100%;
+    position: relative;
     height: 670px;
 }
 #stb{
@@ -54,23 +125,129 @@ body{
     background-color: rgb(250,75,6);
     font-size: x-large;
     cursor: pointer;
-    transition: all 6s;
+    transition: all .1s;
     height: 90px;
     z-index: 1000;
+    top: 9%;
+    left: 2%;
     border: none;
     border-radius: 50%;
 }
-#hithere{
+.hithere{
     font-family:'Courier New', Courier, monospace ;
     font-size: 60px;
     color: azure;
     margin: 80px;
+    z-index: 10;
+    position: absolute;
+    left: 5%;
     width: 245px;
+    display: flex;     
 }
 #SD{
     font-family:'Courier New', Courier, monospace ;
     color: azure;
 }
-::-webkit-scrollbar{
-    color: blueviolet;
-}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #04b18b; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(22, 96, 131); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(5, 73, 136); 
+  }
+  @media screen and (max-width:511px){
+    #blur,#blur1{
+        width: auto;
+        z-index: 0;
+    }
+    #r1{
+      top:700px ;
+    }
+    .openbtn{
+        display: flex;
+    }
+    #navbar{
+        display: none;
+    }
+    #r2{
+        z-index: 1000;
+        margin-left: 0px;
+    }
+    #hithere{
+        z-index: 1;
+
+    }
+    #gamelvl{
+        top: 2px;
+    }
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    color: rgb(14, 185, 43);
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
