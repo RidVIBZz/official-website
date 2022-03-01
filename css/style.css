@@ -179,15 +179,6 @@ ul{
     width: 245px;
     display: flex;     
 }
-.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18{
-color: #69C9D0;/*
-background-color: #EE1D52;*/
-}
-.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18{
-    position: absolute;
-    top: 113%;
-    
-}
 #SD{
     font-family:'Courier New', Courier, monospace ;
     color: azure;
@@ -221,7 +212,6 @@ background-color: #EE1D52;*/
           left: 5%;
       }
       80%{
-          padding: 2%;
           left: 10%;
       }
       100%{
