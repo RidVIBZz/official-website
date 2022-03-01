@@ -3,6 +3,44 @@ body{
     margin: 0%;
     padding: 0%;
 }
+#myage{
+    position: relative;
+    left: -20px;
+    top: 20px;
+    display: flex;
+    width: 650px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    color: azure;
+    font-size: 40px;
+}
+#myage2{
+    position: relative;
+    left: -20px;
+    top: 20px;
+    display: flex;
+    width: 650px;
+    justify-content: space-around;
+    flex-direction: row;
+    color: azure;
+    font-size: 40px;
+}
+#myage3{
+    position: relative;
+    left: -20px;
+    top: 20px;
+    display: flex;
+    width: 650px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    color: azure;
+    font-size: 40px;
+}
+#myage span,#myage2 span,#myage3 span{
+    margin-top: 39px;
+    margin-left:10px ;
+    margin-right: 10px;
+}
 ul{
     list-style-type: none;
     margin: 0%;
@@ -53,7 +91,7 @@ ul{
     padding: 5px;
     z-index: 1;
     top: 1%;
-    left :80%;
+    left :78%;
     font-family: 'Courier New', Courier, monospace;
     border: solid #4de51f 4px;
     box-sizing: border-box;
@@ -70,41 +108,36 @@ ul{
 
 }
 #abt{
-    margin-left: 50px;
-    display: flex;
+    margin-left: 26px;
     position: absolute;
-    width: 400px;
-    top: 762px;
+    width: 550px;
+    top: 680px;
     z-index: 1;
 }
 #aboutme{
     color: aliceblue;
     font-family:'Courier New', Courier, monospace ;
-    font-size: 20px;
-    margin-top: 50px;
-    margin-left: 30px;
+    font-size: 28px;
+    margin-top: 10px;
 }
 #r1{
     margin-left: 0px;
     opacity: 0.3;
-    width: auto;
-    float: right;
+    width: 630px;
     position: absolute;
 }
 #blur1{
     opacity: 0.3;
     margin-left: -30px;
-    height: 750px;
-    z-index: 1;
+    width: 670px;
+    height: 630px;
 }
 #r2{
     margin-left: 0px;
-    float: right;
     opacity: 0.3;
 }
 #blur{
-    width:780px;
-    margin-right: -8%;
+    width:600px;
     opacity: 0.3;
     }
 #btndiv{
@@ -131,20 +164,29 @@ ul{
     height: 90px;
     z-index: 1000;
     top: 9%;
-    left: 2%;
+    right: 2%;
     border: none;
     border-radius: 50%;
 }
 .hithere{
     font-family:'Courier New', Courier, monospace ;
     font-size: 60px;
-    color: azure;
-    margin: 80px;
     z-index: 10;
-    position: absolute;
+    top: 40px;
     left: 5%;
+    animation: anim 1s ease-in-out;
+    position: absolute;
     width: 245px;
     display: flex;     
+}
+.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18{
+color: #69C9D0;/*
+background-color: #EE1D52;*/
+}
+.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18{
+    position: absolute;
+    top: 113%;
+    
 }
 #SD{
     font-family:'Courier New', Courier, monospace ;
@@ -171,7 +213,22 @@ ul{
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(5, 73, 136); 
   }
-  @media screen and (max-width:511px){
+  @keyframes anim {
+      0%{
+        left: 0%;
+      }
+      50%{
+          left: 5%;
+      }
+      80%{
+          padding: 2%;
+          left: 10%;
+      }
+      100%{
+          left: 5%;
+      }
+  }
+  @media screen and (max-width:640px){
     #r2,#r1{
         display: none;
     }
@@ -183,6 +240,9 @@ ul{
     }
     #blur1{
       display: none;
+    }
+    #blur{
+        width: 650px;
     }
     .openbtn{
         display: flex;
@@ -197,7 +257,7 @@ ul{
     }
     #abt{
       top: 70px;
-      left: -18px;
+      left: 0px;
       width: auto;
     }
     #gamelvl{

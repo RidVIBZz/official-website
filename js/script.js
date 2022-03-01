@@ -1,25 +1,67 @@
 let stb = document.querySelector("#stb")
+let year = document.getElementById('year')
+let month =  document.getElementById('month')
+let day = document.getElementById('day')
+let hour = document.getElementById('hour')
+let minute = document.getElementById('minute')
+let seconds = document.getElementById('second')
+let milsec = document.getElementById('milsec')
+let birth = new Date('dec ,03,2008')
 let gm = document.getElementById('gamelvl')
 let diff = document.getElementById('difficulty')
 let rndint = (min,max)=> Math.floor(Math.random()*(max-min))+min;
 let rndrgb = (min,max)=> 'rgb(' + Math.floor(Math.random()*max)+'' + ',' + Math.floor(Math.random()*max) + ',' + Math.floor(Math.random()*max)+')'
-
-stb.addEventListener('mouseover', function(){
-    this.style.background = rndrgb(1,255)
-    console.log(rndrgb(1,255));
-    this.style.left = rndint(5,99) + '%'
-    this.style.top = rndint(5,99) + '%'
-    this.style.bottom = 'auto'
-})
 let ismobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)
 if (ismobile) {
     stb.style.display = 'none'
     gm.style.display = 'none'
 }
+function addzero(d){
+  return (d < 10) ? '0' + d.toString() : d.toString();
+}
+let ageinterval = ()=>{
+setInterval(function(){
+let current = new Date
+year.innerHTML=addzero(Math.abs(current.getFullYear() - birth.getFullYear()));
+month.innerHTML=addzero(Math.abs(current.getMonth() - birth.getMonth()))
+day.innerHTML=addzero(Math.abs(current.getDay() - birth.getDay()))
+hour.innerHTML=addzero(Math.abs(current.getHours() - birth.getHours()))
+minute.innerHTML=addzero(Math.abs(current.getMinutes() - birth.getMinutes()))
+seconds.innerHTML=addzero(Math.abs(current.getSeconds() - birth.getSeconds()))
+milsec.innerHTML=addzero(Math.abs(current.getMilliseconds() - birth.getMilliseconds()));
+}, 1);
+}
+ageinterval()
+let intervel = setInterval(() => {
+  stb.style.background = rndrgb(1,255)
+  stb.style.right = rndint(5,99) + '%'
+  stb.style.top = rndint(5,99) + '%'
+  stb.style.bottom = 'auto'
+  gm.style.borderColor = rndrgb(1,255)
+  diff.style.color = rndrgb(1,255)
+}, 1000);
+stb.addEventListener('mouseover', function(){
+    clearInterval(intervel)
+    this.style.background = rndrgb(1,255)
+    this.style.right = rndint(5,99) + '%'
+    this.style.top = rndint(5,99) + '%'
+    this.style.bottom = 'auto'
+    gm.style.borderColor = rndrgb(1,255)
+    diff.style.color = rndrgb(1,255)
+})
 /*stb.addEventListener('click', function(){
     
 })*/
 diff.addEventListener('click',first)
+function zero(e){
+  diff.innerHTML='Hard';
+  stb.style.transition='all .1s';
+  gm.style.borderColor = rndrgb(1,255)
+  diff.style.color = rndrgb(1,255)
+  e.stopImmediatePropagation();
+  this.removeEventListener("click", zero);
+  document.onclick = first;
+}
 function first(e){
   diff.innerHTML='Medium';
   stb.style.transition='all .6s';
@@ -29,19 +71,22 @@ function first(e){
   this.removeEventListener("click", first);
   document.onclick = second;
 }
-function second(){
+function second(e){
 
-  diff.innerHTML='easy';
+  diff.innerHTML='Easy';
   stb.style.transition='all 1s';
   gm.style.borderColor = rndrgb(1,255)
   diff.style.color = rndrgb(1,255)
+  e.stopImmediatePropagation();
+  this.removeEventListener("click", second);
+  document.onclick = third;
 }
-function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-  }
+function third(e){
+  diff.innerHTML='Extreme';
+  stb.style.transition='none';
+  gm.style.borderColor = rndrgb(1,255)
+  diff.style.color = rndrgb(1,255)
+  e.stopImmediatePropagation();
+  this.removeEventListener("click", third);
+  document.onclick = zero;
+}
