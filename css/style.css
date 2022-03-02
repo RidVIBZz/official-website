@@ -168,15 +168,32 @@ ul{
     border: none;
     border-radius: 50%;
 }
+.hithere span{
+    transition: all .8s;
+    height: auto;
+    position: relative;
+    color: azure;
+    cursor: pointer;
+}
+.a1,.a2,.a3,.a4,.a5,.a6,.a7{
+    left: 5%;
+}
+.a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18{
+    top: 80px;
+    left: -57%;
+}
+.a9,.a2{
+    margin-right: 20px;
+}
 .hithere{
     font-family:'Courier New', Courier, monospace ;
     font-size: 60px;
     z-index: 10;
     top: 40px;
     left: 5%;
-    animation: anim 1s ease-in-out;
+    animation: anim 1s ease-in;
     position: absolute;
-    width: 245px;
+    width: 500px !important;
     display: flex;     
 }
 #SD{
@@ -207,14 +224,11 @@ ul{
   @keyframes anim {
       0%{
         left: 0%;
+        opacity: 0;
       }
-      50%{
-          left: 5%;
-      }
-      80%{
-          left: 10%;
-      }
+
       100%{
+          opacity: 1;
           left: 5%;
       }
   }

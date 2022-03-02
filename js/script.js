@@ -8,7 +8,9 @@ let seconds = document.getElementById('second')
 let milsec = document.getElementById('milsec')
 let birth = new Date('dec ,03,2008')
 let gm = document.getElementById('gamelvl')
-let diff = document.getElementById('difficulty')
+let diff = document.getElementById('difficulty');
+let span = document.querySelector('.hithere span');
+let rndeg = (min,max)=> 'rotate('+Math.floor(Math.random()*(max-min))+min+'deg)';
 let rndint = (min,max)=> Math.floor(Math.random()*(max-min))+min;
 let rndrgb = (min,max)=> 'rgb(' + Math.floor(Math.random()*max)+'' + ',' + Math.floor(Math.random()*max) + ',' + Math.floor(Math.random()*max)+')'
 let ismobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)
@@ -16,6 +18,14 @@ if (ismobile) {
     stb.style.display = 'none'
     gm.style.display = 'none'
 }
+span.addEventListener('mouseover',function(){
+  this.style.transform = rndeg(1,45)
+  console.log(rndint(1,45));
+  this.style.color = rndrgb(100,255)
+})
+span.addEventListener('mouseout',function(){
+  this.style.transform = 'scale(1.3)'
+})
 function addzero(d){
   return (d < 10) ? '0' + d.toString() : d.toString();
 }
@@ -60,7 +70,7 @@ function zero(e){
   diff.style.color = rndrgb(1,255)
   e.stopImmediatePropagation();
   this.removeEventListener("click", zero);
-  document.onclick = first;
+  diff.onclick = first;
 }
 function first(e){
   diff.innerHTML='Medium';
@@ -69,7 +79,7 @@ function first(e){
   diff.style.color = rndrgb(1,255)
   e.stopImmediatePropagation();
   this.removeEventListener("click", first);
-  document.onclick = second;
+  diff.onclick = second;
 }
 function second(e){
 
@@ -79,7 +89,7 @@ function second(e){
   diff.style.color = rndrgb(1,255)
   e.stopImmediatePropagation();
   this.removeEventListener("click", second);
-  document.onclick = third;
+  diff.onclick = third;
 }
 function third(e){
   diff.innerHTML='Extreme';
@@ -88,5 +98,5 @@ function third(e){
   diff.style.color = rndrgb(1,255)
   e.stopImmediatePropagation();
   this.removeEventListener("click", third);
-  document.onclick = zero;
+  diff.onclick = zero;
 }
