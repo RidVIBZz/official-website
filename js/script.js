@@ -8,8 +8,9 @@ let seconds = document.getElementById('second')
 let milsec = document.getElementById('milsec')
 let birth = new Date('dec ,03,2008')
 let gm = document.getElementById('gamelvl')
-let diff = document.getElementById('difficulty');
-let span = document.querySelector('.hithere span');
+let diff = document.getElementById('difficulty');/*
+let span = document.querySelector('.hithere');
+let aspan = span.textContent*/
 let rndeg = (min,max)=> 'rotate('+Math.floor(Math.random()*(max-min))+min+'deg)';
 let rndint = (min,max)=> Math.floor(Math.random()*(max-min))+min;
 let rndrgb = (min,max)=> 'rgb(' + Math.floor(Math.random()*max)+'' + ',' + Math.floor(Math.random()*max) + ',' + Math.floor(Math.random()*max)+')'
@@ -18,14 +19,17 @@ if (ismobile) {
     stb.style.display = 'none'
     gm.style.display = 'none'
 }
-span.addEventListener('mouseover',function(){
-  this.style.transform = rndeg(1,45)
-  console.log(rndint(1,45));
-  this.style.color = rndrgb(100,255)
-})
-span.addEventListener('mouseout',function(){
-  this.style.transform = 'scale(1.3)'
-})
+let span = document.getElementById('hi').children;
+for (let i = 0; i <= span.length - 1; i++) {
+  span[i].addEventListener('mouseover',function(){
+    this.style.transform = rndeg(1,-45)
+    console.log(rndint(1,-45));
+    this.style.color = rndrgb(100,255);
+  })
+  span[i].addEventListener('mouseout',function(){
+    this.style.color = 'azure'
+  })
+}
 function addzero(d){
   return (d < 10) ? '0' + d.toString() : d.toString();
 }
