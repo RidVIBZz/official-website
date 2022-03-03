@@ -3,6 +3,7 @@ body{
     margin: 0%;
     padding: 0%;
 }
+#notification
 #myage{
     position: relative;
     left: -20px;
@@ -41,13 +42,14 @@ body{
     margin-left:10px ;
     margin-right: 10px;
 }
-ul{
+ul,li{
     list-style-type: none;
     margin: 0%;
     padding: 0%;
+    cursor: pointer;
 }
 #navbar{
-    font-size: 19px;
+    font-size: 21px;
     padding: 10px;
     font-family: sans-serif;
     display: flex;
@@ -56,7 +58,7 @@ ul{
     justify-content: space-evenly;
     margin-left: 0px;
     flex-direction: row;
-    z-index: -1;
+    z-index: 10;
     flex: 1;
 }
 #home{
@@ -65,12 +67,14 @@ ul{
     text-decoration: none;
     left: 30px;
     box-sizing: border-box;
+    z-index: 1;
     color: azure;
 
 }
 #proj{
     position: absolute;
     text-decoration: none;
+    z-index: 1;
     top: 3%;
     left: 230px;
     box-sizing: border-box;
@@ -99,6 +103,7 @@ ul{
 
 }
 #abtme{
+    z-index: 1;
     top: 3%;
     position: absolute;
     text-decoration: none;
@@ -107,7 +112,7 @@ ul{
     color: azure;
 
 }
-#abt{
+.abt{
     margin-left: 26px;
     position: absolute;
     width: 550px;
@@ -175,22 +180,22 @@ ul{
     color: azure;
     cursor: pointer;
 }
-.a1,.a2,.a3,.a4,.a5,.a6,.a7{
+.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a19{
     left: 5%;
 }
-.a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18{
+.a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18,.a20,.a21{
     top: 80px;
-    left: -57%;
+    left: -77%;
 }
-.a9,.a2{
+.a21,.a2{
     margin-right: 20px;
 }
 .hithere{
     font-family:'Courier New', Courier, monospace ;
-    font-size: 60px;
+    font-size: 80px;
     z-index: 10;
-    top: 40px;
-    left: 5%;
+    top: 25px;
+    left: 2%;
     animation: anim 1s ease-in;
     position: absolute;
     width: 500px !important;
@@ -229,7 +234,7 @@ ul{
 
       100%{
           opacity: 1;
-          left: 5%;
+          left: 2%;
       }
   }
   @media screen and (max-width:640px){
