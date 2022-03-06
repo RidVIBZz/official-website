@@ -1,6 +1,7 @@
 let stb = document.querySelector("#stb")
 let year = document.getElementById('year')
 let month =  document.getElementById('month')
+let notif = document.getElementById('notification')
 let day = document.getElementById('day')
 let hour = document.getElementById('hour')
 let minute = document.getElementById('minute')
@@ -8,9 +9,7 @@ let seconds = document.getElementById('second')
 let milsec = document.getElementById('milsec')
 let birth = new Date('june ,03,2007')
 let gm = document.getElementById('gamelvl')
-let diff = document.getElementById('difficulty');/*
-let span = document.querySelector('.hithere');
-let aspan = span.textContent*/
+let diff = document.getElementById('difficulty');
 let rndeg = (min,max)=> 'rotate('+Math.floor(Math.random()*(max-min))+min+'deg)';
 let rndint = (min,max)=> Math.floor(Math.random()*(max-min))+min;
 let rndrgb = (min,max)=> 'rgb(' + Math.floor(Math.random()*max)+'' + ',' + Math.floor(Math.random()*max) + ',' + Math.floor(Math.random()*max)+')'
@@ -45,6 +44,29 @@ milsec.innerHTML=addzero(Math.abs(current.getMilliseconds() - birth.getMilliseco
 }, 1);
 }
 ageinterval()
+setInterval(() => {
+   notif.style.color = rndrgb(1,255);
+   notif.style.background = rndrgb(1,255);
+  if (diff.innerHTML=='Easy') {
+    notif.style.fontSize = '23px'
+    notif.innerHTML = 'Well, Anyone Can Do Easy'
+  }
+  else if(diff.innerHTML=='Medium'){
+    notif.style.width = '610px'
+    notif.style.fontSize = '20px'
+    notif.innerHTML = 'Are You Sure That You Didn`t Pull Out Any Tricks?'
+  }
+  else if(diff.innerHTML=='Extreme'){
+    notif.style.width = '630px'
+    notif.style.fontSize = '15px'
+    notif.innerHTML = 'Impossible!!! You Are 1 Of 2 In A Trillion Person Who Can Do This...'
+  }
+  else if(diff.innerHTML=='Hard'){
+    notif.style.width = '600px'
+    notif.style.fontSize = '22px'
+    notif.innerHTML = "Damn.. I'm Impressed That You Did This"
+  }
+}, 1000);
 let intervel = setInterval(() => {
   stb.style.background = rndrgb(1,255)
   stb.style.right = rndint(5,99) + '%'
@@ -53,6 +75,14 @@ let intervel = setInterval(() => {
   gm.style.borderColor = rndrgb(1,255)
   diff.style.color = rndrgb(1,255)
 }, 1000);
+let notifint = ()=>{
+  setInterval(() => {
+    notif.style.opacity = 0;
+  }, 7000);
+  setInterval(() => {
+    notif.style.display = 'none';
+  }, 8000);
+}
 stb.addEventListener('mouseover', function(){
     clearInterval(intervel)
     this.style.background = rndrgb(1,255)
@@ -62,9 +92,11 @@ stb.addEventListener('mouseover', function(){
     gm.style.borderColor = rndrgb(1,255)
     diff.style.color = rndrgb(1,255)
 })
-/*stb.addEventListener('click', function(){
-    
-})*/
+stb.addEventListener('click',notific)
+ function notific(){
+  notif.style.display = 'flex';
+    notifint()
+}
 diff.addEventListener('click',first)
 function zero(e){
   diff.innerHTML='Hard';

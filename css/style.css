@@ -1,13 +1,29 @@
 body{
-    background-color: rgba(34, 33, 33, 0.966);
+    background-color: rgba(34, 33, 33, 0.938);
     margin: 0%;
     padding: 0%;
 }
-#notification
+#notification{
+    width: 600px;
+    display: none;
+    position: relative;
+    justify-content: center;
+    font-weight: 600;
+    left: 27%;
+    transition: all 1s;
+    top: 40px;
+    border-radius: 10px;
+    animation: notif 1s ; 
+    height: 42px;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: -30px;
+}
 #myage{
     position: relative;
     left: -20px;
-    top: 20px;
+    top: 0px;
     display: flex;
     width: 650px;
     justify-content: space-evenly;
@@ -18,7 +34,7 @@ body{
 #myage2{
     position: relative;
     left: -20px;
-    top: 20px;
+    top: 0px;
     display: flex;
     width: 650px;
     justify-content: space-around;
@@ -29,7 +45,7 @@ body{
 #myage3{
     position: relative;
     left: -20px;
-    top: 20px;
+    top: 0px;
     display: flex;
     width: 650px;
     justify-content: space-evenly;
@@ -126,15 +142,13 @@ ul,li{
     margin-top: 10px;
 }
 #r1{
-    margin-left: 0px;
+    margin-left: -17px;
     opacity: 0.3;
     width: 630px;
-    position: absolute;
 }
 #blur1{
     opacity: 0.3;
-    margin-left: -30px;
-    width: 670px;
+    width: 623px;
     height: 630px;
 }
 #r2{
@@ -225,6 +239,14 @@ ul,li{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(5, 73, 136); 
+  }
+  @keyframes notif{
+      0%{
+          top: 0px;
+      }
+      100%{
+          top: 40px;
+      }
   }
   @keyframes anim {
       0%{
