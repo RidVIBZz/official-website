@@ -7,7 +7,7 @@ let hour = document.getElementById('hour')
 let minute = document.getElementById('minute')
 let seconds = document.getElementById('second')
 let milsec = document.getElementById('milsec')
-let birth = new Date('june ,03,2007')
+let birth = new Date('dec ,03,2008')
 let gm = document.getElementById('gamelvl')
 let diff = document.getElementById('difficulty');
 let rndeg = (min,max)=> 'rotate('+Math.floor(Math.random()*(max-min))+min+'deg)';
