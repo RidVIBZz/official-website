@@ -1,7 +1,13 @@
 body{
-    background-color: rgba(34, 33, 33, 0.938);
+    background-color: rgba(57, 189, 85, 0.938);
     margin: 0%;
     padding: 0%;
+    transition: all 3s;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 100%;
 }
 #notification{
     width: 600px;
@@ -66,23 +72,23 @@ ul,li{
     cursor: pointer;
 }
 #navbar{
-    font-size: 21px;
+    font-size: 41px;
     padding: 10px;
-    font-family: sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
+    width: 900px;
     height: 50px;
-    margin-bottom: -90px;
+    margin-bottom: -200px;
     justify-content: space-evenly;
     margin-left: 0px;
     flex-direction: row;
     z-index: 10;
-    flex: 1;
 }
 #home{
     position: absolute;
     top: 3%;
     text-decoration: none;
-    left: 30px;
+    left: 3%;
     box-sizing: border-box;
     z-index: 1;
     color: azure;
@@ -90,10 +96,11 @@ ul,li{
 }
 #proj{
     position: absolute;
+    margin-left: 160px;
     text-decoration: none;
     z-index: 1;
     top: 3%;
-    left: 230px;
+    left: 20%;
     box-sizing: border-box;
     color: azure;
 
@@ -124,7 +131,7 @@ ul,li{
     top: 3%;
     position: absolute;
     text-decoration: none;
-    left: 110px;
+    left: 14%;
     box-sizing: border-box;
     color: azure;
 
@@ -141,27 +148,9 @@ ul,li{
     font-family:'Courier New', Courier, monospace ;
     font-size: 28px;
     width: 50%;
-    background:linear-gradient(rgba(107, 231, 247, 0.192),rgb(2, 92, 14));
     margin-top: 7px;
     height: 630px;
 }
-#r1{
-    opacity: 0.3;
-    width: 630px;
-    position: absolute;
-    float: left;
-    top: 657px;
-    left: 50%;
-}
-#r2{
-    margin-left: 0px;
-    opacity: 0.3;
-    float: left;
-}
-#blur{
-    width:400px;
-    opacity: 0.3;
-    }
 #btndiv{
     position: relative;
     top: 2%;
@@ -198,24 +187,24 @@ ul,li{
     cursor: pointer;
 }
 .a1,.a2,.a3,.a4,.a5,.a6,.a7,.a19{
-    left: 5%;
+    left: 3%;
 }
 .a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18,.a20,.a21{
-    top: 80px;
-    left: -77%;
+    top: 180px;
+    left: -42%;
 }
 .a21,.a2{
     margin-right: 20px;
 }
 .hithere{
     font-family:'Courier New', Courier, monospace ;
-    font-size: 80px;
+    font-size: 198px;
     z-index: 10;
-    top: 25px;
+    top: 170px;
     left: 2%;
+    width: auto;
     animation: anim 1s ease-in;
     position: absolute;
-    width: 500px !important;
     display: flex;     
 }
 #SD{

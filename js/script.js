@@ -1,4 +1,5 @@
 let stb = document.querySelector("#stb")
+let body = document.querySelector('body')
 let year = document.getElementById('year')
 let month =  document.getElementById('month')
 let notif = document.getElementById('notification')
@@ -22,10 +23,7 @@ let span = document.getElementById('hi').children;
 for (let i = 0; i <= span.length - 1; i++) {
   span[i].addEventListener('mouseover',function(){
     this.style.transform = rndeg(1,-45)
-    console.log(rndint(-45,1));
     this.style.color = rndrgb(100,255);
-  })
-  span[i].addEventListener('mouseout',function(){
   })
 }
 function addzero(d){
@@ -45,7 +43,8 @@ milsec.innerHTML=addzero(Math.abs(current.getMilliseconds() - birth.getMilliseco
 }
 ageinterval()
 setInterval(() => {
-   notif.style.color = rndrgb(1,255);
+  body.style.background = rndrgb(1,255);
+  notif.style.color = rndrgb(1,255);
    notif.style.background = rndrgb(1,255);
   if (diff.innerHTML=='Easy') {
     notif.style.fontSize = '23px'
@@ -66,7 +65,7 @@ setInterval(() => {
     notif.style.fontSize = '22px'
     notif.innerHTML = "Damn.. I'm Impressed That You Did This"
   }
-}, 1000);
+}, 2000);
 let intervel = setInterval(() => {
   stb.style.background = rndrgb(1,255)
   stb.style.right = rndint(5,99) + '%'
@@ -88,6 +87,7 @@ stb.addEventListener('mouseover', function(){
     this.style.background = rndrgb(1,255)
     this.style.right = rndint(5,99) + '%'
     this.style.top = rndint(5,99) + '%'
+    body.style.background = rndrgb(1,255);
     this.style.bottom = 'auto'
     gm.style.borderColor = rndrgb(1,255)
     diff.style.color = rndrgb(1,255)
