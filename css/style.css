@@ -252,31 +252,13 @@ ul,li{
       }
   }
   @media screen and (max-width:640px){
-    #r2,#r1{
-        display: none;
-    }
     .notification{
       margin-bottom: -21px;
-    }
-    #aboutme{
-      height: 0%;
-    }
-    #blur1{
-      display: none;
-    }
-    #blur{
-        width: 650px;
-    }
-    .openbtn{
-        display: flex;
     }
     #navbar{
     top: 35px;
     position: absolute;
     width: 200px;
-    }
-    .hithere{
-      display: none;
     }
     #abt{
       top: 70px;
