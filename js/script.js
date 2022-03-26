@@ -20,6 +20,13 @@ if (ismobile) {
     gm.style.display = 'none'
 }
 let span = document.getElementById('hi').children;
+let span2 = document.getElementById('hi2').children;
+for (let r = 0; r <= span2.length - 1; r++) {
+  span2[r].addEventListener('mouseover',function(){
+    this.style.transform = rndeg(1,-45)
+    this.style.color = rndrgb(100,255);
+  })
+}
 for (let i = 0; i <= span.length - 1; i++) {
   span[i].addEventListener('mouseover',function(){
     this.style.transform = rndeg(1,-45)
@@ -28,6 +35,18 @@ for (let i = 0; i <= span.length - 1; i++) {
 }
 function addzero(d){
   return (d < 10) ? '0' + d.toString() : d.toString();
+}
+function addzeroes(r){
+  if (r < 100 & r > 10){
+    r = '0' + r.toString()
+  }
+  else if(r < 10){
+    r = '00' + r.toString()
+  }
+  else{
+    r = r.toString()
+  }
+  return r
 }
 let ageinterval = ()=>{
 setInterval(function(){
@@ -38,7 +57,7 @@ day.innerHTML=addzero(Math.abs(current.getDay() - birth.getDay()))
 hour.innerHTML=addzero(Math.abs(current.getHours() - birth.getHours()))
 minute.innerHTML=addzero(Math.abs(current.getMinutes() - birth.getMinutes()))
 seconds.innerHTML=addzero(Math.abs(current.getSeconds() - birth.getSeconds()))
-milsec.innerHTML=addzero(Math.abs(current.getMilliseconds() - birth.getMilliseconds()));
+milsec.innerHTML=addzeroes(Math.abs(current.getMilliseconds() - birth.getMilliseconds()));
 }, 1);
 }
 ageinterval()
@@ -63,7 +82,7 @@ setInterval(() => {
   else if(diff.innerHTML=='Hard'){
     notif.style.width = '600px'
     notif.style.fontSize = '22px'
-    notif.innerHTML = "Damn.. I'm Impressed That You Did This"
+    notif.innerHTML = "Damn.. I'm Impressed That You Did It"
   }
 }, 2000);
 let intervel = setInterval(() => {
@@ -71,6 +90,7 @@ let intervel = setInterval(() => {
   stb.style.right = rndint(5,99) + '%'
   stb.style.top = rndint(5,99) + '%'
   stb.style.bottom = 'auto'
+  gm.style.transition = 'all 0.6s'
   gm.style.borderColor = rndrgb(1,255)
   diff.style.color = rndrgb(1,255)
 }, 1000);

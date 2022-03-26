@@ -30,40 +30,42 @@ body{
     position: relative;
     left: -20px;
     top: 0px;
+    height: 22vh;
     display: flex;
-    width: 650px;
-    justify-content: space-evenly;
+    width: auto;
+    justify-content: center;
     flex-direction: row;
     color: azure;
-    font-size: 40px;
+    font-size: 5vw;
 }
 #myage2{
     position: relative;
     left: -20px;
     top: 0px;
+    height: 22vh;
     display: flex;
-    width: 650px;
-    justify-content: space-around;
+    width: auto;
+    justify-content: center;
     flex-direction: row;
     color: azure;
-    font-size: 40px;
+    font-size: 5vw;
 }
 #myage3{
     position: relative;
     left: -20px;
     top: 0px;
-    height: 50px;
     display: flex;
-    width: 650px;
-    justify-content: space-evenly;
+    width: auto;
+    height: 22vh;
+    justify-content: center;
     flex-direction: row;
     color: azure;
-    font-size: 40px;
+    font-size: 5vw;
 }
 #myage span,#myage2 span,#myage3 span{
-    margin-top: 39px;
-    margin-left:10px ;
-    margin-right: 10px;
+    margin-top: 5vw;
+    margin-left:2vw ;
+    margin-right: 2vw;
 }
 ul,li{
     list-style-type: none;
@@ -72,7 +74,7 @@ ul,li{
     cursor: pointer;
 }
 #navbar{
-    font-size: 41px;
+    font-size: 3vw;
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
@@ -139,15 +141,15 @@ ul,li{
 .abt{
     margin-left: 26px;
     position: absolute;
-    width: 550px;
+    width: auto;
     top: 680px;
     z-index: 1;
 }
 #aboutme{
     color: aliceblue;
     font-family:'Courier New', Courier, monospace ;
-    font-size: 28px;
-    width: 50%;
+    font-size: 3vw;
+    width: auto;
     margin-top: 7px;
     height: 630px;
 }
@@ -157,12 +159,6 @@ ul,li{
     left: 2%;
     border: solid 3px red;
     }
-#fp{
-    display: flex;
-    width: 100%;
-    position: relative;
-    height: 670px;
-}
 #stb{
     font-family: cursive;
     color: azure;
@@ -179,56 +175,64 @@ ul,li{
     border: none;
     border-radius: 50%;
 }
-.hithere span{
+#hi2 span{
     transition: all .8s;
     height: auto;
     position: relative;
     color: azure;
     cursor: pointer;
 }
-.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a19{
-    left: 3%;
+.hithere span{
+    transition: all .8s;
+    position: relative;
+    height: auto;
+    color: azure;
+    cursor: pointer;
 }
-.a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18,.a20,.a21{
-    top: 180px;
-    left: -42%;
+.a10{
+    margin-left: 50px;
 }
-.a21,.a2{
-    margin-right: 20px;
+.a3{
+    margin-left: 20px;
+}
+#hi2{
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 15.8vw;
+    position: absolute;
+    margin-right: 0%;
+    top: 12vw;
+    left: 7vw;
+    width: auto;
+    animation-name: hia;
+    animation-duration: 1s;
+    display: flex;
 }
 .hithere{
     font-family:'Courier New', Courier, monospace ;
-    font-size: 198px;
-    z-index: 10;
-    top: 170px;
-    left: 2%;
-    width: auto;
-    animation: anim 1s ease-in;
+    font-size: 15.8vw;
     position: absolute;
+    margin-right: 0%;
+    top:-1vw;
+    left: 3vw;
+    width: auto;
+    animation: anim 1s ;
     display: flex;     
 }
 #SD{
     font-family:'Courier New', Courier, monospace ;
     color: azure;
 }
-/* width */
 ::-webkit-scrollbar {
     width: 10px;
     border-radius: 10px;
   }
-  
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #04b18b; 
   }
-   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgb(22, 96, 131); 
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(5, 73, 136); 
   }
@@ -242,13 +246,28 @@ ul,li{
   }
   @keyframes anim {
       0%{
-        left: 0%;
+        left: -192%;
         opacity: 0;
       }
-
+      60%{
+        opacity: 0;
+    }
       100%{
           opacity: 1;
-          left: 2%;
+          left: 3vw;
+      }
+  }
+  @keyframes hia {
+      0%{
+        left: -192%;
+        opacity: 0;
+      }
+      60%{
+          opacity: 0;
+      }
+      100%{
+          opacity: 1;
+          left: 7vw;
       }
   }
   @media screen and (max-width:640px){
