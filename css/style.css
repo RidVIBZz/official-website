@@ -30,7 +30,7 @@ body{
     position: relative;
     left: -20px;
     top: 0px;
-    height: 22vh;
+    height: 10vh;
     display: flex;
     width: auto;
     justify-content: center;
@@ -42,7 +42,7 @@ body{
     position: relative;
     left: -20px;
     top: 0px;
-    height: 22vh;
+    height: 10vh;
     display: flex;
     width: auto;
     justify-content: center;
@@ -56,7 +56,7 @@ body{
     top: 0px;
     display: flex;
     width: auto;
-    height: 22vh;
+    height: 3vh;
     justify-content: center;
     flex-direction: row;
     color: azure;
@@ -72,37 +72,43 @@ ul,li{
     margin: 0%;
     padding: 0%;
     cursor: pointer;
-}
+}   
 #navbar{
     font-size: 3vw;
-    padding: 10px;
+    padding: 1vw;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
-    width: 900px;
-    height: 50px;
-    margin-bottom: -200px;
+    width: auto;
+    height: auto;
     justify-content: space-evenly;
     margin-left: 0px;
     flex-direction: row;
-    z-index: 10;
 }
 #home{
     position: absolute;
-    top: 3%;
+    top: 2vh;
     text-decoration: none;
-    left: 3%;
+    left: 3vw;
     box-sizing: border-box;
     z-index: 1;
     color: azure;
 
 }
-#proj{
+#abtme{    
     position: absolute;
-    margin-left: 160px;
     text-decoration: none;
     z-index: 1;
-    top: 3%;
-    left: 20%;
+    top: 2vh;
+    left: 15vw;
+    box-sizing: border-box;
+    color: azure;
+}
+#proj{
+    position: absolute;
+    text-decoration: none;
+    z-index: 1;
+    top: 2vh;
+    left: 34vw;
     box-sizing: border-box;
     color: azure;
 
@@ -128,30 +134,19 @@ ul,li{
     color: azure;
 
 }
-#abtme{
-    z-index: 1;
-    top: 3%;
-    position: absolute;
-    text-decoration: none;
-    left: 14%;
-    box-sizing: border-box;
-    color: azure;
-
-}
 .abt{
-    margin-left: 26px;
-    position: absolute;
+    margin-left: 2vw;
+    height:auto;
     width: auto;
-    top: 680px;
-    z-index: 1;
 }
 #aboutme{
     color: aliceblue;
     font-family:'Courier New', Courier, monospace ;
     font-size: 3vw;
+    position: absolute;
     width: auto;
-    margin-top: 7px;
-    height: 630px;
+    top: 49vw;
+    margin-top: 1vw;
 }
 #btndiv{
     position: relative;
@@ -190,10 +185,10 @@ ul,li{
     cursor: pointer;
 }
 .a10{
-    margin-left: 50px;
+    margin-left: 4vw;
 }
 .a3{
-    margin-left: 20px;
+    margin-left: 2vw;
 }
 #hi2{
     font-family:'Courier New', Courier, monospace ;
@@ -202,6 +197,8 @@ ul,li{
     margin-right: 0%;
     top: 12vw;
     left: 7vw;
+    justify-content: center;
+    align-items: center;
     width: auto;
     animation-name: hia;
     animation-duration: 1s;
@@ -212,6 +209,8 @@ ul,li{
     font-size: 15.8vw;
     position: absolute;
     margin-right: 0%;
+    justify-content: center;
+    align-items: center;
     top:-1vw;
     left: 3vw;
     width: auto;
