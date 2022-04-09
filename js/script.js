@@ -1,4 +1,6 @@
 let stb = document.querySelector("#stb")
+let proj = document.getElementById('proj1')
+let proj2 = document.getElementById('proj2')
 let body = document.querySelector('body')
 let year = document.getElementById('year')
 let month =  document.getElementById('month')
@@ -63,6 +65,8 @@ milsec.innerHTML=addzeroes(Math.abs(current.getMilliseconds() - birth.getMillise
 ageinterval()
 setInterval(() => {
   body.style.background = rndrgb(1,255);
+  proj.style.borderColor = rndrgb(1,255);
+  proj2.style.borderColor = rndrgb(1,255);
   notif.style.color = rndrgb(1,255);
    notif.style.background = rndrgb(1,255);
   if (diff.innerHTML=='Easy') {
@@ -93,7 +97,7 @@ let intervel = setInterval(() => {
   gm.style.transition = 'all 0.6s'
   gm.style.borderColor = rndrgb(1,255)
   diff.style.color = rndrgb(1,255)
-}, 1000);
+}, 800);
 let notifint = ()=>{
   setInterval(() => {
     notif.style.opacity = 0;
