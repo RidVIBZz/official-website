@@ -47,6 +47,7 @@ body{
     width: auto;
     justify-content: center;
     flex-direction: row;
+    margin-top: 9vh;
     color: azure;
     font-size: 5vw;
 }
@@ -54,6 +55,7 @@ body{
     position: relative;
     left: -20px;
     top: 0px;
+    margin-top: 9vh;
     display: flex;
     width: auto;
     height: 3vh;
@@ -192,7 +194,7 @@ ul,li{
 }
 #hi2{
     font-family:'Courier New', Courier, monospace ;
-    font-size: 15.8vw;
+    font-size: 15.3vw;
     position: absolute;
     margin-right: 0%;
     top: 12vw;
@@ -206,7 +208,7 @@ ul,li{
 }
 .hithere{
     font-family:'Courier New', Courier, monospace ;
-    font-size: 15.8vw;
+    font-size: 15.3vw;
     position: absolute;
     margin-right: 0%;
     justify-content: center;
