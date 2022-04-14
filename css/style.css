@@ -21,7 +21,7 @@ footer{
     left: 28vw;
     justify-content: center;
     position: relative;
-    top:190vh;
+    top:1300px;
     color: azure;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -56,7 +56,7 @@ html{
     background-color: azure;
     border-radius: 50px;
     position: relative;
-    top: 180vh;
+    top: 1200px;
     font-family: 'Courier New', Courier, monospace;
 }
 #proj1{
@@ -71,7 +71,7 @@ html{
     color: grey;
     background-color: azure;
     position: relative;
-    top: 180vh;
+    top: 1200px;
     font-family: 'Courier New', Courier, monospace;
 }
 #heading{
@@ -81,7 +81,7 @@ html{
     font-size: 5vw;
     color: azure;
     position: relative;
-    top: 176vh;
+    top: 1200px;
     font-family: 'Courier New', Courier, monospace;
 }
 #notification{
