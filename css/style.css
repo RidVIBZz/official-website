@@ -29,20 +29,18 @@ html{
     scroll-behavior: smooth;
 }
 #img{
-    width: 140px;
+    width: 20vw;
     position: relative;
     border-radius: 20px;
-    left: 3vw;
-    height: 130px;
-    margin-right: 70px;
+    height: 21vw;
+    margin: 20px;
 }
 #img1{
-    width: 140px;
+    width: 20vw;
     position: relative;
     border-radius: 20px;
-    left: 3vw;
-    height: 130px;
-    margin-right: 70px;
+    height: 21vw;
+    margin: 20px;
 }
 #proj2{
     display: flex;
