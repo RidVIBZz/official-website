@@ -163,7 +163,7 @@ ul,li{
 }
 #home{
     position: absolute;
-    top: 5vh;
+    top: 50px;
     text-decoration: none;
     left: 3vw;
     box-sizing: border-box;
@@ -175,7 +175,7 @@ ul,li{
     position: absolute;
     text-decoration: none;
     z-index: 1;
-    top: 5vh;
+    top: 50px;
     left: 15vw;
     box-sizing: border-box;
     color: azure;
@@ -184,7 +184,7 @@ ul,li{
     position: absolute;
     text-decoration: none;
     z-index: 1;
-    top: 5vh;
+    top: 50px;
     left: 34vw;
     box-sizing: border-box;
     color: azure;
