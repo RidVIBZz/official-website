@@ -67,8 +67,10 @@ setInterval(() => {
   body.style.background = rndrgb(1,255);
   proj.style.borderColor = rndrgb(1,255);
   proj2.style.borderColor = rndrgb(1,255);
+  diff.style.color = rndrgb(1,255)
+  gm.style.borderColor = rndrgb(1,255)
   notif.style.color = rndrgb(1,255);
-   notif.style.background = rndrgb(1,255);
+  notif.style.background = rndrgb(1,255);
   if (diff.innerHTML=='Easy') {
     notif.style.fontSize = '23px'
     notif.innerHTML = 'Well, Anyone Can Do Easy'
